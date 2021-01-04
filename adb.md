@@ -1,5 +1,5 @@
-1.adb安装
-https://adbshell.com/downloads
-adb.exe  AdbWinApi.dll  AdbWinUsbApi.dll
-C:\Windows\System32
-C:\Windows\SysWOW64
+1.adb安装 \n
+https://adbshell.com/downloads \n
+adb.exe  AdbWinApi.dll  AdbWinUsbApi.dll \n
+C:\Windows\System32 \n
+C:\Windows\SysWOW64 \n
