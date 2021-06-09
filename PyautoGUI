@@ -35,3 +35,26 @@ try:
             last_pos = new_pos
 except KeyboardInterrupt:
     print('\nExit.')
+    
+
+######################一次完整的图像识别连击##########################
+import pyautogui
+import time
+
+#系统准备时间
+time.sleep(2)
+#取得帮助菜单位置
+help_pos = pyautogui.locateOnScreen('auto_help.png')
+goto_pos = pyautogui.center(help_pos)
+#移动鼠标
+pyautogui.moveTo(goto_pos,duration=0.5)
+#点击
+pyautogui.click()
+#取得about位置
+about_pos = pyautogui.locateOnScreen('auto_about.png')
+gotoabout_pos = pyautogui.center(about_pos)
+#再次移动鼠标
+pyautogui.moveTo(gotoabout_pos,duration=1)
+#再次点击
+pyautogui.click()
+
