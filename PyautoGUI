@@ -58,3 +58,55 @@ pyautogui.moveTo(gotoabout_pos,duration=1)
 #再次点击
 pyautogui.click()
 
+######################################################################
+import pyautogui
+import time
+
+#系统准备时间
+time.sleep(2)
+#点击一次编辑器
+pyautogui.click(button="left")
+#输入【xxxx】
+pyautogui.typewrite('go run and debug')
+#输入回车
+pyautogui.typewrite('\ngogogogogogogo',0.1)
+#输入good
+pyautogui.typewrite(['Enter','g','o','o','d','left','left','left','backspace','G','end','.'],0.1)
+######################################################################
+import pyautogui
+import time
+time.sleep(2)
+#每个动作间隔5秒钟
+pyautogui.PAUSE = 0.1
+#记事本打时间
+pyautogui.press('f5');
+#打入三行内容
+pyautogui.typewrite('\nhello\nhello\nhello')
+pyautogui.typewrite('\nhello')
+pyautogui.typewrite('\nhihihihihi')
+#按下ctrl
+pyautogui.keyDown('ctrl');
+#按下a，全选
+pyautogui.keyDown('a');
+#按下c，复制
+pyautogui.keyDown('c');
+#松开ctrl
+pyautogui.keyUp('ctrl');
+#鼠标点击记事本下方
+pyautogui.click(600,600)
+#输入空行
+pyautogui.typewrite('\n\n')
+#粘贴
+pyautogui.hotkey('ctrl','v')
+#######################################################################
+import pyautogui
+
+#pyautogui.moveTo(100, 100, 2, pyautogui.easeInQuad)     # start slow, end fast
+#pyautogui.moveTo(100, 100, 2, pyautogui.easeOutQuad)    # start fast, end slow
+#pyautogui.moveTo(100, 100, 2, pyautogui.easeInOutQuad)  # start and end fast, slow in middle
+#pyautogui.moveTo(100, 100, 10, pyautogui.easeInBounce)   # bounce at the end
+pyautogui.moveTo(100, 100, 2, pyautogui.easeInElastic)  # rubber band at the esnd
+#######################################################################
+
+
+
