@@ -1,0 +1,13 @@
+
+#cv控制打开窗口大小
+import cv2
+
+img = cv2.imread('cat.jpg', cv2.IMREAD_COLOR)
+img = cv2.resize(img, (3104, 2048))
+cv2.namedWindow('result', cv2.WINDOW_NORMAL)    # 窗口大小可以改变
+# cv2.namedWindow('result', cv2.WINDOW_AUTOSIZE)    # 窗口大小不可以改变
+# cv2.namedWindow('result', cv2.WINDOW_FREERATIO)   # 窗口大小自适应比例
+# cv2.namedWindow('result', cv2.WINDOW_KEEPRATIO)   # 窗口大小保持比例
+# cv2.namedWindow('result', cv2.WINDOW_GUI_EXPANDED)    # 显示色彩变成暗色 ps.这个我没看出来有啥用。
+cv2.imshow('result', img)
+cv2.waitKey(0)
