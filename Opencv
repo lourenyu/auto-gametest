@@ -15,7 +15,7 @@ cv2.waitKey(0)
 ##############################
 img.size #大小
 img.dtype #图片类型
-img.shape # HWC数值获取
+img.shape # HWC数值获取，RGB图像，实际顺序（B,G,R）
 use:
 print(img.xxx)
 ############################
