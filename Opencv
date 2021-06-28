@@ -11,3 +11,11 @@ cv2.namedWindow('result', cv2.WINDOW_NORMAL)    # 窗口大小可以改变
 # cv2.namedWindow('result', cv2.WINDOW_GUI_EXPANDED)    # 显示色彩变成暗色 ps.这个我没看出来有啥用。
 cv2.imshow('result', img)
 cv2.waitKey(0)
+
+##############################
+img.size #大小
+img.dtype #图片类型
+img.shape # HWC数值获取
+use:
+print(img.xxx)
+############################
