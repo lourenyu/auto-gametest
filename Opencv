@@ -18,4 +18,8 @@ img.dtype #图片类型
 img.shape # HWC数值获取，RGB图像，实际顺序（B,G,R）
 use:
 print(img.xxx)
-############################
+###########打包#################
+def cv_show(name,img):
+    cv2.imshow(name,img)
+    cv2.waitKey(0)
+    cv2.destroyAllWindows()
