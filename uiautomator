@@ -1,0 +1,14 @@
+#1 
+运行：
+import uiautomator2 as u2
+#连接手机
+device = u2.connect()
+#打开被测试app
+device(text='剑与远征').click()
+报错：
+uiautomator2.adbutils.AdbError: unknown host service
+
+解决方法：
+adb kill-server
+adb start-server
+adb remount
