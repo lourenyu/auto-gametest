@@ -1,3 +1,15 @@
+#adb当前进程
+1.方法
+安卓7.0：adb shell dumpsys activity activities | findstr mFocusedActivity
+安卓8.0：adb shell dumpsys activity activities | findstr mResumedActivity
+2.方法
+adb shell dumpsys activity top | findstr ACTIVITY
+3.方法
+aapt dump badging file.apk
+
+
+
+
 1.adb安装  （Android Debug Bridge）
 https://adbshell.com/downloads  
 将adb.exe  AdbWinApi.dll  AdbWinUsbApi.dll文件放入下列路径  
