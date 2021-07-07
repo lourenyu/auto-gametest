@@ -1,4 +1,5 @@
 #1 
+
 运行：
 import uiautomator2 as u2
 #连接手机
@@ -12,3 +13,66 @@ uiautomator2.adbutils.AdbError: unknown host service
 adb kill-server
 adb start-server
 adb remount
+
+
+#2练习
+
+import uiautomator2 as u2
+#连接手机
+# device = u2.connect(r'emulator-5554')
+device = u2.connect()
+
+#元素定位
+device(text = 'TapTap').click()
+#e = d().child() 子集元素
+#e.sibling() e的同级元素
+pos1 = device(resourceId = 'com.taptap:id/bottom_bar/android.widget.LinearLayout[1]/android.widget.FrameLayout[5]')
+# d.xpath('//*[@resource-id="com.taptap:id/bottom_bar"]/android.widget.LinearLayout[1]/android.widget.FrameLayout[5]')  ？xpath不支持left（），找不到resourid怎么办？
+pos1.click()
+pos1.left().click()
+
+#安装weditor
+#Terminal:pip install weditor
+
+# 打开被测试app
+# device(text='TapTap').click()
+# # 获取app包名
+# print(device.app_current())
+#运行列表
+# print(device.app_list())
+#设备信息
+# print(device.device_info)
+#卸载
+# device.app_uninstall('包名com.lilithgames.afk.bilibili')
+#直接打开app
+# device.app_start('com.lilithgames.afk.bilibili')
+# #直接关闭app
+# device.app_stop('com.lilithgames.afk.bilibili')
+#app数据
+# device.app_clear('com.lilithgames.afk.bilibili')
+#设备信息
+# print(device.info)
+# print(device.device_info)
+#屏幕大小
+print(device.window_size())
+# #截屏
+# device.screenshot(r'C:/Users/lourenyu/Desktop/py//autoff/img//1.png')
+# #推送
+# device.push(r'C:/Users/lourenyu/Desktop/py/autoff/img/1.png',r'/data/')
+#拉取
+# device.pull('/data/1.png',r'C:/Users/lourenyu/Desktop/py/autoff/img/66.png')
+
+#静音
+# for a in range(3):
+#     device.press('volume_mute')
+#音量+
+# for b in range(3):
+#     device.press('volume_up')
+# #音量-
+# for c in range(3):
+#     device.press('volume_down')
+
+#最近程序
+# device.press('recent')
+#电源
+# device.press('power')
